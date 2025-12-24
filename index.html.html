@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I miei social</title>
+
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #f2f2f2;
+            --card-bg: #ffffff;
+            --text-color: #111;
+            --button-bg: #111;
+            --button-text: #fff;
+        }
+
+        body.dark {
+            --bg-color: #0f0f0f;
+            --card-bg: #1c1c1c;
+            --text-color: #fff;
+            --button-bg: #fff;
+            --button-text: #111;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 25px;
+            text-align: center;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .toggle {
+            text-align: right;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 15px 0;
+        }
+
+        h1 {
+            margin: 10px 0 5px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            opacity: 0.8;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            background: var(--button-bg);
+            color: var(--button-text);
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .link:hover {
+            transform: scale(1.04);
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Toggle Dark/Light -->
+    <div class="toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    
+    <h1>@micaregliu93</h1>
+    <p>Sto cercando di essere uno Youtuber ✨</p>
+
+    <!-- Social links -->
+    <a class="link" href="https://instagram.com/micaregliu93 target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+    </a>
+
+    <a class="link" href="https://tiktok.com/@micaregliu51988" target="_blank">
+        <i class="fab fa-tiktok"></i> TikTok
+    </a>
+
+    <a class="link" href="https://youtube.com/@itzrealMicaregliu93" target="_blank">
+        <i class="fab fa-youtube"></i> YouTube
+    </a>
+
+    <footer>
+        © 2025 – Tutti i diritti riservati
+    </footer>
+</div>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+    }
+</script>
+
+</body>
+</html>
